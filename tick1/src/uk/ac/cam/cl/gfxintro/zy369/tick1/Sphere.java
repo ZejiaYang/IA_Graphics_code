@@ -1,4 +1,6 @@
-package uk.ac.cam.cl.gfxintro.crsid.tick1;
+package uk.ac.cam.cl.gfxintro.zy369.tick1;
+
+import java.util.Vector;
 
 public class Sphere extends SceneObject {
 
@@ -59,12 +61,52 @@ public class Sphere extends SceneObject {
 		double a = D.dot(D);
 		double b = 2 * D.dot(O.subtract(C));
 		double c = (O.subtract(C)).dot(O.subtract(C)) - Math.pow(r, 2);
-		
+
+		double intersect = b * b - 4 * a * c;
+
+		if(intersect < 0)
+			return new RaycastHit();
+		else if(intersect == 0){
+			double s = -b/(2*a);
+			if(s < 0)
+				return new RaycastHit();
+			else{
+				Vector3 vdist = D.scale(s);
+				double distance = Math.sqrt(vdist.dot(vdist));
+				Vector3 location =  O.add(vdist);
+				return new RaycastHit(this, distance, location, getNormalAt(location));
+			}
+		}else{
+			double s1 = (-b + Math.sqrt(intersect))/(2*a);
+			double s2 = (-b - Math.sqrt(intersect))/(2*a);
+
+			Vector3 vdist1 = D.scale(s1);
+			Vector3 vdist2 = D.scale(s2);
+
+			double distance1 = Math.sqrt(vdist1.dot(vdist1));
+			double distance2 = Math.sqrt(vdist2.dot(vdist2));
+
+			Vector3 location1 = O.add(vdist1);
+			Vector3 location2 = O.add(vdist2);
+
+			Vector3 normal1 = location1.subtract(C).normalised();
+			Vector3 normal2 = location2.subtract(C).normalised();
+
+			//There is no intersection
+			if (s1 < 0 && s2 < 0)
+				return new RaycastHit();
+
+			//There is only one intersection
+			//ray, s2 doesn't exist
+			else if (s1 >= 0 && s2 < 0)
+				return new RaycastHit(this, distance1, location1, normal1);
+			// since s1 >= 0 and s2 >= 0 and s2 < s1, thus s2 is more close to origin
+			else
+				return new RaycastHit(this, distance2, location2, normal2);
+		}
 		// TODO: Determine if ray and sphere intersect - if not return an empty RaycastHit
         // TODO: If so, work out any point of intersection
         // TODO: Then return a RaycastHit that includes the object, ray distance, point, and normal vector
-
-		return new RaycastHit(); 
 	}
 
 	// Get normal to surface at position

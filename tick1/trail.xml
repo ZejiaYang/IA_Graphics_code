@@ -1,0 +1,7 @@
+<scene>
+    <ambient-light colour="#FFFFFF" intensity="0.1"/>
+    <point-light x="3" y="3" z="3" colour="#FFFFFF" intensity="100"/>
+    <sphere x="-0.8" y="-0.5" z="3.63261" radius="0.35" colour="#FFFFFF" kS="0" reflectivity="0.5"/>
+    <plane x="0" y="1" z="2" nx="0" ny="0" nz="-1" colour="#4AAA0A"/>
+    <sphere x="0.72734" y="-0.35322" z="5.19986" radius="0.85" colour="#101010" reflectivity="0.05"/>
+</scene>

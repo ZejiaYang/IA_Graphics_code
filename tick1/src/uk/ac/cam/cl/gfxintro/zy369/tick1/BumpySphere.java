@@ -1,4 +1,4 @@
-package uk.ac.cam.cl.gfxintro.crsid.tick1;
+package uk.ac.cam.cl.gfxintro.zy369.tick1;
 
 import java.io.File;
 import java.io.IOException;
@@ -36,7 +36,7 @@ public class BumpySphere extends Sphere {
 	public Vector3 getNormalAt(Vector3 position) {
 		
 		//TODO: return the normal modified by the bump map
-		
+		return new Vector3(position.x, position.y, position.z);
 	}
 
 }

@@ -1,4 +1,4 @@
-package uk.ac.cam.cl.gfxintro.crsid.tick1;
+package uk.ac.cam.cl.gfxintro.zy369.tick1;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -406,7 +406,7 @@ public class Tick1Tests {
 	}
 
 	public static void main(String[] args) {
-		boolean testAll = false;
+		boolean testAll = true;
 		if (args.length > 0) {
 			testAll = args[0].equals("--all") || args[0].equals("-a");
 		}
