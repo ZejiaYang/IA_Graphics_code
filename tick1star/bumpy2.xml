@@ -1,0 +1,6 @@
+<scene>
+    <ambient-light colour = '#FABCDE' intensity = "0.8"/>
+    <plane x="0.0" y="-2" z="100" nx="0" ny="0" nz="1" colour = '#000000' kS="1.0" texture-map="bg.png" />
+    <plane x="0.0" y="-1" z="0" nx="0" ny="1" nz="0" colour="#FABCDE" kS="0.0"/>
+    <sphere x="0.0" y="0" z="3.5" radius="0.7" colour ="#F72ABC" kS ='0' reflectivity="0.02" texture-map="shot.png"/>
+</scene>

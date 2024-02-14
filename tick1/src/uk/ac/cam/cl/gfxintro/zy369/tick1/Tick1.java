@@ -11,7 +11,7 @@ import javax.imageio.ImageIO;
 public class Tick1 {
 	// Default input and output files
 	public static final String DEFAULT_INPUT = "test1.xml";
-	public static final String DEFAULT_OUTPUT = "output1.png";
+	public static final String DEFAULT_OUTPUT = "output.png";
 	
 	public static final int DEFAULT_BOUNCES = 2; // Default number of ray bounces
 

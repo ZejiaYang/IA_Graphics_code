@@ -10,6 +10,7 @@ public class Sphere extends SceneObject {
 	private final double SPHERE_ALPHA = 10;
 	private final double SPHERE_REFLECTIVITY = 0.3;
 
+	private final double SPHERE_REFRACTION = 0.1;
 	// The world-space position of the sphere
 	protected Vector3 position;
 
@@ -29,6 +30,7 @@ public class Sphere extends SceneObject {
 		this.phong_kS = SPHERE_KS;
 		this.phong_alpha = SPHERE_ALPHA;
 		this.reflectivity = SPHERE_REFLECTIVITY;
+		this.refractive_index = SPHERE_REFRACTION;
 	}
 
 	public Sphere(Vector3 position, double radius, ColorRGB colour, double kD, double kS, double alphaS, double reflectivity, ColorRGB transmittance) {
@@ -68,6 +70,7 @@ public class Sphere extends SceneObject {
 			return new RaycastHit();
 		else if(intersect == 0){
 			double s = -b/(2*a);
+
 			if(s < 0)
 				return new RaycastHit();
 			else{
@@ -104,9 +107,7 @@ public class Sphere extends SceneObject {
 			else
 				return new RaycastHit(this, distance2, location2, normal2);
 		}
-		// TODO: Determine if ray and sphere intersect - if not return an empty RaycastHit
-        // TODO: If so, work out any point of intersection
-        // TODO: Then return a RaycastHit that includes the object, ray distance, point, and normal vector
+
 	}
 
 	// Get normal to surface at position

@@ -1,0 +1,11 @@
+<scene>
+    <ambient-light colour = '#050505'/>
+    <point-light x="2.94" y="2" z="-0.5" colour="#FABCDE" intensity="60"/>
+    <point-light x="-2.94" y="2" z="-0.5" colour="#FABCDE" intensity="60"/>
+    <point-light x="1.8" y="2" z="-5" colour="#FABCDE" intensity="60"/>
+    <point-light x="-1.8" y="2" z="-5" colour="#FABCDE" intensity="60"/>
+    <point-light x="0" y="0" z="-0.5" colour="#FABCDE" intensity="20"/>
+    <plane x="0.0" y="0.0" z="100" nx="0" ny="0" nz="1" colour = '#000000' kS="0.8" texture-map="bg2.png"/>
+    <sphere x="0.0" y="0" z="3.5" radius="0.7" colour ="#F72ABC" kS ='0' reflectivity="0.02" texture-map="gold.png"/>
+    <plane x="0.0" y="-1" z="0" nx="0" ny="1" nz="0" colour="#FABCDE" kS="0.8"/>
+</scene>

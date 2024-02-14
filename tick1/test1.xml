@@ -6,4 +6,5 @@
   <sphere x="-.4" y="0.5" z="4.33013" radius="0.7" colour="#0071BC" kd="0.8" kS="0.8" alphaS="50"/>
   <sphere x="0.72734" y="-0.35322" z="3.19986" radius="0.45" colour="#3AA010" kd="0.8" kS="0.8" alphaS="50"/>
   <plane x="0.0" y="-0.10622" z="4.68013" nx="0" ny="4.2239089012146" nz="-2.180126190185547" colour="#111111" kS="0.8"/>
+  <sphere x="-0.2" y="-0.1" z="2.63261" radius="0.4" colour="#FF1835" kd="0.8" kS="0.8" alphaS="50"/>
 </scene>
